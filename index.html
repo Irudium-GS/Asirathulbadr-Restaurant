@@ -3,11 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saffron Oasis - Authentic Saudi Arabian Restaurant | Fresh Juices & Traditional Cuisine</title>
+    <title>Asirathulbadr - Authentic Saudi Arabian Restaurant | Fresh Juices & Traditional Cuisine</title>
     <meta name="description" content="Experience authentic Saudi Arabian cuisine and fresh juices at Saffron Oasis in Riyadh. Premium halal dishes, traditional recipes, and nutritional excellence since 2018." />
     <meta name="keywords" content="Saudi restaurant, halal food, fresh juices, shawarma, kabsa, mandi, Arabian cuisine, Riyadh dining, nutrition facts" />
     <meta name="author" content="Saffron Oasis Restaurant" />
     <link rel="canonical" href="https://saffronoasis.sa" />
+
+    <!-- Favicon / site icon -->
+    <link rel="icon" type="image/png" href="/assets/Favicon-Be_LFetq.png" />
+    <link rel="shortcut icon" href="/assets/Favicon-Be_LFetq.png" />
+    <link rel="apple-touch-icon" href="/assets/Favicon-Be_LFetq.png" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -32,6 +37,47 @@
 
     <!-- Remix Icon CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Option A: Server-side include (rename index.html to index.php) -->
+    <!-- <?php include __DIR__ . '/head.php'; ?> -->
+
+    <!-- Option B: Client-side fetch from a PHP endpoint (keep index.html as-is) -->
+    <!-- <script>
+    fetch('/head-fragment.php')
+      .then(r => r.text())
+      .then(html => document.head.insertAdjacentHTML('beforeend', html))
+      .catch(()=>{/* handle error */});
+
+    // Helper to POST review JSON to /send-review.php
+    function sendReview(data) {
+      return fetch('/send-review.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+      }).then(r => r.json());
+    }
+
+    // Example: attach to a form with id="review-form"
+    document.addEventListener('submit', function (e) {
+      if (e.target && e.target.id === 'review-form') {
+      e.preventDefault();
+      const f = e.target;
+      const data = {
+        name: (f.querySelector('[name="name"]')?.value || '').trim(),
+        email: (f.querySelector('[name="email"]')?.value || '').trim(),
+        rating: parseInt(f.querySelector('[name="rating"]')?.value, 10) || 0,
+        comment: (f.querySelector('[name="comment"]')?.value || '').trim()
+      };
+      sendReview(data).then(res => {
+        if (res && res.success) {
+        alert('Thank you for your review.');
+        f.reset();
+        } else {
+        alert(res.error || 'Failed to send review.');
+        }
+      }).catch(() => alert('Network error.'));
+      }
+    });
+    </script> -->
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -63,7 +109,7 @@
       "currenciesAccepted": "SAR"
     }
     </script>
-    <script type="module" crossorigin src="/assets/index-BYuHhGLg.js"></script>
+    <script type="module" crossorigin src="/assets/index-_vGilxOq.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-BoWQba7q.css">
   </head>
 
